@@ -1,0 +1,145 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab2</title>
+    <style>
+        .cont {
+            width: 75%;
+            margin: 20% auto;
+        }
+
+        .row::after {
+            content: ".";
+            clear: both;
+            visibility: hidden;
+            display: block;
+            line-height: 0;
+            height: 0;
+        }
+
+
+        form {
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border-radius: 10px;
+            border: 3px solid #ccc;
+            padding: 8px 16px;
+            margin: 5px auto;
+            outline: none !important;
+
+
+        }
+
+        input :placeholder,
+        textarea:placeholder {
+            color: #ccc;
+
+        }
+
+        input.valid,
+        textarea.valid {
+            border-color: #36cc36;
+
+        }
+
+        input.invalid,
+        textarea.invalid {
+            border-color: #FB4250;
+        }
+
+        input+span,
+        textarea+span {
+            display: none;
+            font-size: .8em;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #FB4250;
+
+        }
+
+        #result {
+            display: none;
+            font-size: 1em;
+            text-align: center;
+            margin: 25px 10px;
+            color: #333;
+        }
+
+        input.invalid+span,
+        textarea.invalid+span {
+            display: block;
+        }
+
+        .btn-div {
+            margin-top: 25px;
+            clear: both;
+        }
+
+        .btn {
+            background: #36cc36;
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+        }
+
+        .btn:hover {
+            background: #555;
+            transition: all .4s ease-in-out;
+            padding: 10px 15px;
+        }
+
+        .input-set {
+            width: 32.6%;
+            float: left;
+            margin-left: 1%;
+        }
+
+        .first {
+            margin-left: 0;
+        }
+
+        .all-inputs {
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<div class="cont">
+    <form action="" class="row">
+        <div class="all-inputs row">
+            <div class="input-set first">
+                <input type="text" name="num1" placeholder="Please Enter a Number">
+                <span>* Must Be a Number</span>
+            </div>
+            <div class="input-set">
+                <input type="text" name="opt" placeholder="Please Enter an opt like + - * /">
+                <span>* Must Be an opt like + - * or /</span>
+            </div>
+            <div class="input-set">
+                <input type="text" name="num2" placeholder="Please Enter a Number">
+                <span>* Must Be a Number</span>
+            </div>
+        </div>
+        <div class="btn-div ">
+            <button type="submit" class="btn">Calculate</button>
+        </div>
+
+        <p for="" id='result'>The result: <strong id="f-result"></strong></p>
+
+    </form>
+</div>
+
+<script src="./index.js"></script>
+
+<body>
+
+</body>
+
+</html>
